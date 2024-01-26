@@ -1,0 +1,21 @@
+{
+  "name": "career-portal-scraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.6",
+    "dotenv": "^16.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "auth": "ts-node -r dotenv/config scripts/auth.ts",
+    "start": "ts-node -r dotenv/config scripts/index.ts",
+    "codegen": "ts-node -r dotenv/config scripts/auth.ts && npx playwright codegen --load-storage playwright/.auth/user.json"
+  },
+  "dependencies": {
+    "fast-csv": "^5.0.0"
+  }
+}
