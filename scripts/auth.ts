@@ -19,7 +19,7 @@ const authFilePath = path.resolve(
 export default (async () => {
   // Configurations
   const launchOptions: LaunchOptions = {
-    headless: true
+    headless: process.env.HEADLESS === 'true'
   }
 
   // Initialize fixtures

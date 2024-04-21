@@ -8,7 +8,7 @@ import { format } from '@fast-csv/format'
 
 // Configurations
 const launchOptions: LaunchOptions = {
-  headless: true
+  headless: process.env.HEADLESS === 'true'
   // args: ['--start-maximized']
 }
 const browserContextOptions: BrowserContextOptions = {

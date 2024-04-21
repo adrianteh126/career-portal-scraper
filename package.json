@@ -12,7 +12,8 @@
   },
   "scripts": {
     "auth": "ts-node -r dotenv/config scripts/auth.ts",
-    "start": "ts-node -r dotenv/config scripts/index.ts",
+    "scrap": "ts-node -r dotenv/config scripts/index.ts",
+    "start": "yarn auth && yarn scrap",
     "codegen": "ts-node -r dotenv/config scripts/auth.ts && npx playwright codegen --load-storage playwright/.auth/user.json"
   },
   "dependencies": {
